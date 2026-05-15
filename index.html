@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Australian Open — A Grand Slam Story</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="hero">
+    <h1>🎾 Australian Open</h1>
+    <p class="subtitle">The Grand Slam of Asia-Pacific</p>
+    <p class="author">By Xengyu Chen · 2026</p>
+  </div>
+
+  <section class="act">
+    <h2>Act 1: What is the Australian Open, and why does it matter?</h2>
+    <div class="chart-row">
+      <div class="chart-container">
+        <h3>Annual Attendance Growth</h3>
+        <div id="attendance_chart"></div>
+      </div>
+      <div class="chart-container">
+        <h3>Prize Money vs Other Grand Slams</h3>
+        <div id="prize_chart"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="act">
+    <h2>Act 2: A Truly Global Stage</h2>
+    <div id="world_map"></div>
+    <div class="chart-container">
+      <h3>Top 10 Nations by Player Count</h3>
+      <div id="top_nations_chart"></div>
+    </div>
+  </section>
+
+  <section class="act">
+    <h2>Act 3: Who Has Ruled the Australian Open?</h2>
+    <div id="mens_champions_chart"></div>
+    <div id="womens_champions_chart"></div>
+    <div id="titles_by_country_chart"></div>
+  </section>
+
+  <section class="act">
+    <h2>Act 4: How Do Australians Fare on Home Soil?</h2>
+    <div class="chart-row">
+      <div id="aus_results_chart"></div>
+      <div id="aus_states_map"></div>
+    </div>
+  </section>
+
+  <section class="act">
+    <h2>Act 5: The Legends — Who is the True King or Queen of Melbourne?</h2>
+    <div class="chart-row">
+      <div id="legend_heatmap"></div>
+      <div id="age_winrate_chart"></div>
+    </div>
+  </section>
+
+  <script src="vega_lite_vis.js"></script>
+</body>
+</html>

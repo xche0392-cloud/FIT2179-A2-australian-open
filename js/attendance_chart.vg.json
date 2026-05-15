@@ -1,0 +1,17 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Australian Open Annual Attendance (1987–2026)", "color": "#ffffff", "fontSize": 16},
+  "width": 700,
+  "height": 350,
+  "background": "#0f2040",
+  "data": {"url": "data/attendance.csv"},
+  "mark": {"type": "line", "point": true, "color": "#a0c4ff"},
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal", "title": "Year", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff", "labelAngle": -45}},
+    "y": {"field": "attendance", "type": "quantitative", "title": "Total Attendance", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff", "format": ","}},
+    "tooltip": [
+      {"field": "year", "type": "ordinal", "title": "Year"},
+      {"field": "attendance", "type": "quantitative", "title": "Attendance", "format": ","}
+    ]
+  }
+}
