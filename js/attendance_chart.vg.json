@@ -4,7 +4,7 @@
   "width": 700,
   "height": 350,
   "background": "#0f2040",
-  "data": {"url": "https://xche0392-cloud.github.io/FIT2179-A2-australian-open/data/attendance.csv"},
+  "data": {"url": "../data/attendance.csv"},
   "mark": {"type": "line", "point": true, "color": "#a0c4ff"},
   "encoding": {
     "x": {"field": "year", "type": "ordinal", "title": "Year", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff", "labelAngle": -45}},
