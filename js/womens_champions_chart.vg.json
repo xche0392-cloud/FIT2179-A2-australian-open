@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Women's Australian Open Champions (2000–2026)", "color": "#ffffff", "fontSize": 16},
+  "width": 600,
+  "height": 300,
+  "background": "#0f2040",
+  "data": {"url": "data/womens_champions.csv"},
+  "transform": [
+    {"filter": "datum.year >= 2000"}
+  ],
+  "mark": {"type": "point", "filled": true, "size": 150},
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal", "title": "Year", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff", "labelAngle": -45}},
+    "y": {"field": "champion", "type": "nominal", "title": null, "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
+    "color": {"field": "country", "type": "nominal", "title": "Country", "legend": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
+    "tooltip": [
+      {"field": "year", "title": "Year"},
+      {"field": "champion", "title": "Champion"},
+      {"field": "country", "title": "Country"}
+    ]
+  }
+}

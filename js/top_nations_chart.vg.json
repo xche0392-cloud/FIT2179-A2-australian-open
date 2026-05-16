@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Top 10 Nations by Player Count (AO 2026)", "color": "#ffffff", "fontSize": 16},
+  "width": 500,
+  "height": 300,
+  "background": "#0f2040",
+  "data": {"url": "data/ao2026.csv"},
+  "transform": [
+    {"fold": ["player_1_country", "player_2_country"], "as": ["side", "country"]},
+    {"aggregate": [{"op": "count", "as": "count"}], "groupby": ["country"]},
+    {"window": [{"op": "rank", "as": "rank"}], "sort": [{"field": "count", "order": "descending"}]},
+    {"filter": "datum.rank <= 10"}
+  ],
+  "mark": {"type": "bar", "color": "#a0c4ff"},
+  "encoding": {
+    "x": {"field": "count", "type": "quantitative", "title": "Number of Appearances", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
+    "y": {"field": "country", "type": "nominal", "title": null, "sort": "-x", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
+    "tooltip": [
+      {"field": "country", "title": "Country"},
+      {"field": "count", "title": "Appearances"}
+    ]
+  }
+}

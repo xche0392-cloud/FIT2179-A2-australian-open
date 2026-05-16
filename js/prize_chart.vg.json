@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Australian Open Winner's Prize Money (2000–2026)", "color": "#ffffff", "fontSize": 16},
+  "width": 400,
+  "height": 350,
+  "background": "#0f2040",
+  "data": {"url": "data/mens_grand_slam.csv"},
+  "transform": [
+    {"filter": "datum.TOURNAMENT === 'Australian Open'"},
+    {"filter": "datum.YEAR >= 2000"}
+  ],
+  "mark": {"type": "line", "point": true, "color": "#a0c4ff"},
+  "encoding": {
+    "x": {"field": "YEAR", "type": "ordinal", "title": "Year", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff", "labelAngle": -45}},
+    "y": {"field": "WINNER_PRIZE", "type": "quantitative", "title": "Prize Money (USD)", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff", "format": "$,.0f"}},
+    "tooltip": [
+      {"field": "YEAR", "title": "Year"},
+      {"field": "WINNER", "title": "Champion"},
+      {"field": "WINNER_PRIZE", "title": "Prize Money", "format": "$,.0f"}
+    ]
+  }
+}

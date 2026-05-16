@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Men's Australian Open Champions (2000–2026)", "color": "#ffffff", "fontSize": 16},
+  "width": 600,
+  "height": 300,
+  "background": "#0f2040",
+  "data": {"url": "data/mens_grand_slam.csv"},
+  "transform": [
+    {"filter": "datum.TOURNAMENT === 'Australian Open'"},
+    {"filter": "datum.YEAR >= 2000"}
+  ],
+  "mark": {"type": "point", "filled": true, "size": 150},
+  "encoding": {
+    "x": {"field": "YEAR", "type": "ordinal", "title": "Year", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff", "labelAngle": -45}},
+    "y": {"field": "WINNER", "type": "nominal", "title": null, "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
+    "color": {"field": "WINNER_NATIONALITY", "type": "nominal", "title": "Country", "legend": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
+    "tooltip": [
+      {"field": "YEAR", "title": "Year"},
+      {"field": "WINNER", "title": "Champion"},
+      {"field": "WINNER_NATIONALITY", "title": "Country"}
+    ]
+  }
+}

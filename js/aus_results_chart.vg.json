@@ -1,0 +1,32 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Australian Players' Best Results (AO 2026)", "color": "#ffffff", "fontSize": 16},
+  "width": 500,
+  "height": 300,
+  "background": "#0f2040",
+  "data": {"url": "data/aus_best_results.csv"},
+  "layer": [
+    {
+      "mark": {"type": "rule", "color": "#a0c4ff", "strokeWidth": 2},
+      "encoding": {
+        "x": {"field": "zero", "type": "quantitative"},
+        "x2": {"field": "best_round"},
+        "y": {"field": "player", "type": "nominal", "sort": "-x", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff"}}
+      }
+    },
+    {
+      "mark": {"type": "point", "filled": true, "size": 150, "color": "#ff9f43"},
+      "encoding": {
+        "x": {"field": "best_round", "type": "quantitative", "title": "Round Reached",
+          "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff",
+            "values": [1,2,3,4,5],
+            "labelExpr": "datum.value === 1 ? 'R128' : datum.value === 2 ? 'R64' : datum.value === 3 ? 'R32' : datum.value === 4 ? 'R16' : 'QF'"}},
+        "y": {"field": "player", "type": "nominal", "sort": "-x", "title": null, "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
+        "tooltip": [
+          {"field": "player", "title": "Player"},
+          {"field": "round_label", "title": "Best Round"}
+        ]
+      }
+    }
+  ]
+}
