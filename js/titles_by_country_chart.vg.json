@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Australian Open Titles by Country (2000–2025)", "color": "#ffffff", "fontSize": 16},
+  "width": 500,
+  "height": 350,
+  "background": "#0f2040",
+  "data": {"url": "data/titles_by_country.csv"},
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": {"field": "titles", "type": "quantitative", "title": "Number of Titles", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
+    "y": {"field": "country", "type": "nominal", "title": null, "sort": "-x", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
+    "color": {"field": "gender", "type": "nominal", "scale": {"domain": ["Men", "Women"], "range": ["#a0c4ff", "#ff9f43"]}, "legend": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
+    "tooltip": [
+      {"field": "country", "title": "Country"},
+      {"field": "gender", "title": "Gender"},
+      {"field": "titles", "title": "Titles"}
+    ]
+  }
+}

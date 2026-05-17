@@ -1,0 +1,19 @@
+player,gender,stat,value
+Novak Djokovic,Men,Titles,1.0
+Novak Djokovic,Men,Win Rate,1.0
+Novak Djokovic,Men,Years Dominant,1.0
+Roger Federer,Men,Titles,0.6
+Roger Federer,Men,Win Rate,0.93
+Roger Federer,Men,Years Dominant,0.67
+Rafael Nadal,Men,Titles,0.2
+Rafael Nadal,Men,Win Rate,0.90
+Rafael Nadal,Men,Years Dominant,0.53
+Serena Williams,Women,Titles,1.0
+Serena Williams,Women,Win Rate,0.98
+Serena Williams,Women,Years Dominant,1.0
+Steffi Graf,Women,Titles,0.57
+Steffi Graf,Women,Win Rate,0.95
+Steffi Graf,Women,Years Dominant,0.67
+Monica Seles,Women,Titles,0.43
+Monica Seles,Women,Win Rate,0.97
+Monica Seles,Women,Years Dominant,0.42
