@@ -19,57 +19,151 @@
     <p class="author">By Xengyu Chen · 2026</p>
   </div>
 
+  <div class="intro">
+    <p>The Australian Open is the first Grand Slam of the year, held every January in Melbourne, Australia. Since its inception in 1905, it has grown into one of the most prestigious tennis tournaments in the world, attracting over one million spectators annually and players from more than 70 nations.</p>
+    <p>This visualisation explores five key questions: How has the tournament grown? Who comes to compete? Who has dominated? How do Australians perform at home? And who truly owns Melbourne Park?</p>
+  </div>
+
+  <!-- ACT 1 -->
   <section class="act">
     <h2>Act 1: What is the Australian Open, and why does it matter?</h2>
+    <p class="act-intro">The Australian Open has undergone a remarkable transformation over the past two decades. Once overshadowed by Wimbledon and the US Open, it has emerged as the most-attended Grand Slam in the world. Two indicators tell this story clearly: the crowds keep growing, and the money keeps rising.</p>
     <div class="chart-row">
       <div class="chart-container">
-        <h3>Annual Attendance Growth</h3>
+        <h3>Annual Attendance (2000–2026)</h3>
+        <p class="chart-caption">Total spectator attendance has more than doubled since 2000, peaking above 800,000 in recent years — more than any other Grand Slam.</p>
         <div id="attendance_chart"></div>
       </div>
       <div class="chart-container">
-        <h3>Prize Money vs Other Grand Slams</h3>
+        <h3>Men's Singles Winner's Prize Money (2000–2025)</h3>
+        <p class="chart-caption">Prize money awarded to the men's singles champion has grown nearly fivefold since 2000, reaching USD $3.5 million in 2025. The dip in 2021 reflects COVID-19 pandemic restrictions on prize distribution.</p>
         <div id="prize_chart"></div>
       </div>
     </div>
   </section>
 
+  <!-- ACT 2 -->
   <section class="act">
-  <h2>Act 2: A Truly Global Stage</h2>
-  <div style="display: flex; justify-content: center;">
-    <div id="world_map"></div>
-  </div>
-  <div class="chart-container">
-    <h3>Top 10 Nations by Player Count</h3>
-    <div id="top_nations_chart"></div>
-  </div>
-</section>
+    <h2>Act 2: A Truly Global Stage</h2>
+    <p class="act-intro">The Australian Open draws competitors from every corner of the globe. In 2026, players representing over 30 nations competed at Melbourne Park. The map below shows the geographic spread — darker shading indicates more players from that nation.</p>
+    <div style="display: flex; justify-content: center;">
+      <div id="world_map"></div>
+    </div>
+    <div style="display: flex; gap: 20px; align-items: center; margin-top: 20px;">
+      <div class="chart-container">
+        <h3>Top 10 Nations by Player Count (AO 2026)</h3>
+        <p class="chart-caption">The United States leads all nations in player appearances at AO 2026, followed closely by Italy and Australia. The host nation's strong representation reflects the depth of domestic tennis development.</p>
+        <div id="top_nations_chart"></div>
+      </div>
+      <div class="act-sidebar">
+        <p>Europe — particularly Spain, France, and Italy — remains the heartland of world tennis. However, the strong showing from the United States and Australia signals a broader shift in the sport's global balance of power.</p>
+        <p>Hover over any country on the map or any bar in the chart to see the exact player count for that nation.</p>
+        <div class="stat-highlight">
+          <span class="stat-number">30+</span>
+          <span class="stat-label">nations represented at AO 2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- ACT 3 -->
   <section class="act">
-  <h2>Act 3: Who Has Ruled the Australian Open?</h2>
-  <div style="display: flex; justify-content: center;">
-    <div id="mens_champions_chart"></div>
-  </div>
-  <div style="display: flex; justify-content: center;">
-    <div id="womens_champions_chart"></div>
-  </div>
-  <div id="titles_by_country_chart"></div>
-</section>
+    <h2>Act 3: Who Has Ruled the Australian Open?</h2>
+    <p class="act-intro">Since 2000, the Australian Open has been defined by a small number of extraordinary players. On the men's side, Novak Djokovic's dominance is unparalleled — no player in the Open Era has won Melbourne as many times. On the women's side, Serena Williams set the standard, though a wider range of nations have claimed the title.</p>
 
-<section class="act">
-  <h2>Act 4: How Do Australians Fare on Home Soil?</h2>
-  <div class="chart-row">
-    <div class="chart-container" id="aus_results_chart"></div>
-    <div class="chart-container" id="aus_states_map"></div>
-  </div>
-</section>
+    <h3 style="text-align: center; margin-bottom: 6px;">Men's Singles Champions (2000–2026)</h3>
+    <p class="chart-caption" style="text-align: center;">Each dot represents a title. Djokovic's column stands alone — 10 titles, spread across 15 years of dominance.</p>
+    <div style="display: flex; justify-content: center;">
+      <div id="mens_champions_chart"></div>
+    </div>
 
-<section class="act">
-  <h2>Act 5: The Legends — Who is the True King or Queen of Melbourne?</h2>
-  <div class="chart-row">
-    <div class="chart-container" id="legend_heatmap"></div>
-    <div class="chart-container" id="age_winrate_chart"></div>
-  </div>
-</section>
+    <h3 style="text-align: center; margin-top: 30px; margin-bottom: 6px;">Women's Singles Champions (2000–2026)</h3>
+    <p class="chart-caption" style="text-align: center;">The women's draw has seen greater variety, with champions from the United States, Belarus, Belgium, Japan, and Kazakhstan all claiming titles in this period.</p>
+    <div style="display: flex; justify-content: center;">
+      <div id="womens_champions_chart"></div>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <h3 style="color:#ccddff; margin-bottom:6px;">Combined Titles by Country (Men's and Women's, 2000–2026)</h3>
+      <p class="chart-caption">Serbia leads the men's count through Djokovic alone, while the United States leads the women's tally by a wide margin. The stacked bars show how each nation's total is split between genders.</p>
+      <div style="display: flex; gap: 40px; align-items: center;">
+        <div id="titles_by_country_chart"></div>
+        <div style="min-width: 250px; max-width: 300px;">
+          <p style="color:#ccddff; font-size:0.95em; line-height:1.8; margin-bottom:15px;">The contrast between men's and women's dominance is striking. Serbia's entire tally comes from one player — Novak Djokovic. The United States, by contrast, has produced multiple women's champions across different generations.</p>
+          <div class="stat-highlight">
+            <span class="stat-number">10</span>
+            <span class="stat-label">Djokovic's Australian Open titles — the most by any player in history</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 4 -->
+  <section class="act">
+    <h2>Act 4: How Do Australians Fare on Home Soil?</h2>
+    <p class="act-intro">Playing in front of a home crowd at Melbourne Park is a unique privilege — but does it translate into results? In 2026, Alex de Minaur was the standout Australian performer, reaching the quarterfinals before falling to world number one Carlos Alcaraz. Most other Australian players were eliminated in the opening rounds, reflecting the brutal depth of the modern draw.</p>
+    <div class="chart-row">
+      <div class="chart-container">
+        <h3>Australian Players' Best Results (AO 2026)</h3>
+        <p class="chart-caption">De Minaur reached the QF (Round 5), while most compatriots exited in R64 or R128. The gap between De Minaur and the rest of the Australian contingent is immediately visible.</p>
+        <div id="aus_results_chart"></div>
+      </div>
+      <div class="chart-container">
+        <h3>Australian Players by Home State</h3>
+        <p class="chart-caption">New South Wales produces the most Australian Open players (7), followed by Queensland (6). Victoria — home of Melbourne Park itself — contributes only 2, showing that proximity to the tournament does not guarantee tennis success.</p>
+        <div id="aus_states_map"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACT 5 -->
+  <section class="act">
+    <h2>Act 5: The Legends — Who is the True King or Queen of Melbourne?</h2>
+    <p class="act-intro">Titles alone do not tell the full story. To truly compare the legends of Melbourne Park, we look at three dimensions: titles won, win rate across all matches played at the Australian Open, and years of dominance. All scores are normalised — a value of 1.0 means the best in that category among this group of six legends.</p>
+    <div class="chart-row">
+      <div class="chart-container">
+        <h3>Legend Stats Comparison (Normalised)</h3>
+        <p class="chart-caption">Darker cells indicate stronger performance. Djokovic and Serena Williams score a perfect 1.0 across all three dimensions. Federer and Graf follow closely in win rate but fall short on titles and years of dominance.</p>
+        <div id="legend_heatmap"></div>
+      </div>
+      <div class="chart-container">
+        <h3>Champion's ATP Ranking vs Prize Money Won</h3>
+        <p class="chart-caption">Higher-ranked players generally win more prize money — but the relationship is not perfectly linear. Prize money has grown substantially since 2000, meaning recent champions earn far more than past champions of equal quality. Hover over each point to see the champion's name and year.</p>
+        <div id="age_winrate_chart"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="metadata">
+    <h3>Data Sources</h3>
+    <ul>
+      <li>Attendance data: Australian Open historical records via Wikipedia.
+        <a href="https://en.wikipedia.org/wiki/Australian_Open" target="_blank">en.wikipedia.org/wiki/Australian_Open</a>
+      </li>
+      <li>Men's Grand Slam results and prize money: Jeff Sackmann's ATP Tennis Dataset.
+        <a href="https://github.com/JeffSackmann/tennis_atp" target="_blank">github.com/JeffSackmann/tennis_atp</a>
+      </li>
+      <li>Women's champions: Jeff Sackmann's WTA Tennis Dataset.
+        <a href="https://github.com/JeffSackmann/tennis_wta" target="_blank">github.com/JeffSackmann/tennis_wta</a>
+      </li>
+      <li>AO 2026 match data: Compiled from official Australian Open draw results.
+        <a href="https://www.ausopen.com" target="_blank">ausopen.com</a>
+      </li>
+      <li>Australian players by state: Tennis Australia player profiles.
+        <a href="https://www.tennis.com.au" target="_blank">tennis.com.au</a>
+      </li>
+      <li>World map geometry: Natural Earth via FIT3179 GitHub repository.
+        <a href="https://github.com/FIT3179/Vega-Lite" target="_blank">github.com/FIT3179/Vega-Lite</a>
+      </li>
+      <li>Australia state boundaries: GeoJSON data.
+        <a href="https://github.com/tonywr71/GeoJson-Data" target="_blank">github.com/tonywr71/GeoJson-Data</a>
+      </li>
+    </ul>
+    <p class="ai-acknowledgement">This visualisation was developed with assistance from Claude (Anthropic) for code generation and text drafting.</p>
+    <p class="footer-credit">Visualisation by Xengyu Chen · FIT2179 Data Visualisation · Monash University · 2026</p>
+  </footer>
 
   <script src="vega_lite_vis.js"></script>
 </body>

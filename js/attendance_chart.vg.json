@@ -9,7 +9,7 @@
   "mark": {"type": "line", "point": true, "color": "#a0c4ff"},
   "encoding": {
     "x": {"field": "year", "type": "ordinal", "title": "Year", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff", "labelAngle": -45}},
-    "y": {"field": "attendance", "type": "quantitative", "title": "Total Attendance", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff", "format": ","}},
+    "y": {"field": "attendance", "type": "quantitative", "title": "Total Attendance", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff", "format": "~f"}},
     "tooltip": [
       {"field": "year", "type": "ordinal", "title": "Year"},
       {"field": "attendance", "type": "quantitative", "title": "Attendance", "format": ","}
