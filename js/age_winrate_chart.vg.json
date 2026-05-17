@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text": "Champion's Ranking vs Prize Money at Australian Open", "color": "#ffffff", "fontSize": 16},
-  "width": 500,
+  "width": 400,
   "height": 350,
   "background": "#0f2040",
   "data": {"url": "data/mens_grand_slam.csv"},

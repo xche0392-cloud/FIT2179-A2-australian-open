@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text": "Australian Players by State", "color": "#ffffff", "fontSize": 16},
-  "width": 500,
-  "height": 400,
+  "width": 400,
+  "height": 300,
   "background": "#0f2040",
   "projection": {"type": "equirectangular"},
   "layer": [

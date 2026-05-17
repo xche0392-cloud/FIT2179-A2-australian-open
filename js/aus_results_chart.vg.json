@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {"text": "Australian Players' Best Results (AO 2026)", "color": "#ffffff", "fontSize": 16},
-  "width": 500,
+  "width": 400,
   "height": 300,
   "background": "#0f2040",
   "data": {"url": "data/aus_best_results.csv"},
