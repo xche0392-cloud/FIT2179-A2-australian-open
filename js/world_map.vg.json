@@ -37,7 +37,7 @@
           "field": "count",
           "type": "quantitative",
           "title": "Player Count",
-          "scale": {"scheme": "blues"},
+          "scale": {"scheme": "blues", "type": "log"},
           "legend": {"labelColor": "#ccddff", "titleColor": "#ccddff"}
         },
         "tooltip": [
