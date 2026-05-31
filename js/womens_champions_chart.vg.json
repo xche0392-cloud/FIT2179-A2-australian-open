@@ -8,11 +8,26 @@
   "transform": [
     {"filter": "datum.year >= 2000"}
   ],
+  "params": [
+    {
+      "name": "country_select",
+      "bind": {
+        "input": "select",
+        "options": [null, "USA", "BLR", "BEL", "GER", "FRA", "RUS", "JPN", "CHN", "DEN", "AUS", "KAZ"],
+        "labels": ["All Countries", "USA", "Belarus", "Belgium", "Germany", "France", "Russia", "Japan", "China", "Denmark", "Australia", "Kazakhstan"],
+        "name": "Filter by Country: "
+      }
+    }
+  ],
   "mark": {"type": "point", "filled": true, "size": 150},
   "encoding": {
     "x": {"field": "year", "type": "ordinal", "title": "Year", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff", "labelAngle": -45}},
     "y": {"field": "champion", "type": "nominal", "title": null, "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
     "color": {"field": "country", "type": "nominal", "title": "Country", "legend": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
+    "opacity": {
+      "condition": {"test": "!country_select || datum.country === country_select", "value": 1},
+      "value": 0.1
+    },
     "tooltip": [
       {"field": "year", "title": "Year"},
       {"field": "champion", "title": "Champion"},
