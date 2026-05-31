@@ -9,11 +9,26 @@
     {"filter": "datum.TOURNAMENT === 'Australian Open'"},
     {"filter": "datum.YEAR >= 2000"}
   ],
+  "params": [
+    {
+      "name": "country_select",
+      "bind": {
+        "input": "select",
+        "options": [null, "Serbian", "Swiss", "Spanish", "American", "Russian", "Swedish"],
+        "labels": ["All Countries", "Serbia", "Switzerland", "Spain", "USA", "Russia", "Sweden"],
+        "name": "Filter by Country: "
+      }
+    }
+  ],
   "mark": {"type": "point", "filled": true, "size": 150},
   "encoding": {
     "x": {"field": "YEAR", "type": "ordinal", "title": "Year", "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff", "labelAngle": -45}},
     "y": {"field": "WINNER", "type": "nominal", "title": null, "axis": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
     "color": {"field": "WINNER_NATIONALITY", "type": "nominal", "title": "Country", "legend": {"labelColor": "#ccddff", "titleColor": "#ccddff"}},
+    "opacity": {
+      "condition": {"test": "!country_select || datum.WINNER_NATIONALITY === country_select", "value": 1},
+      "value": 0.1
+    },
     "tooltip": [
       {"field": "YEAR", "title": "Year"},
       {"field": "WINNER", "title": "Champion"},
