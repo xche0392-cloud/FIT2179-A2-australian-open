@@ -5,15 +5,36 @@
   "height": 350,
   "background": "#0f2040",
   "data": {"url": "data/legends_stats.csv"},
-  "mark": {"type": "rect"},
-  "encoding": {
-    "x": {"field": "stat", "type": "nominal", "title": null, "axis": {"labelColor": "#ccddff", "labelAngle": 0}},
-    "y": {"field": "player", "type": "nominal", "title": null, "axis": {"labelColor": "#ccddff"}},
-    "color": {"field": "value", "type": "quantitative", "scale": {"scheme": "blues", "domain": [0, 1]}, "legend": {"labelColor": "#ccddff", "titleColor": "#ccddff", "title": "Score"}},
-    "tooltip": [
-      {"field": "player", "title": "Player"},
-      {"field": "stat", "title": "Stat"},
-      {"field": "value", "title": "Score", "format": ".2f"}
-    ]
-  }
+  "layer": [
+    {
+      "mark": {"type": "rect"},
+      "encoding": {
+        "x": {"field": "stat", "type": "nominal", "title": null, "axis": {"labelColor": "#ccddff", "labelAngle": 0}},
+        "y": {"field": "player", "type": "nominal", "title": null, "axis": {"labelColor": "#ccddff"}},
+        "color": {
+          "field": "value",
+          "type": "quantitative",
+          "scale": {"scheme": "blues", "domain": [0, 1]},
+          "legend": {"labelColor": "#ccddff", "titleColor": "#ccddff", "title": "Score"}
+        },
+        "tooltip": [
+          {"field": "player", "title": "Player"},
+          {"field": "stat", "title": "Stat"},
+          {"field": "value", "title": "Score", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "fontSize": 12, "fontWeight": "bold"},
+      "encoding": {
+        "x": {"field": "stat", "type": "nominal"},
+        "y": {"field": "player", "type": "nominal"},
+        "text": {"field": "value", "type": "quantitative", "format": ".2f"},
+        "color": {
+          "condition": {"test": "datum.value < 0.5", "value": "#ffffff"},
+          "value": "#0f2040"
+        }
+      }
+    }
+  ]
 }
