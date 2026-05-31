@@ -4,7 +4,46 @@
   "width": 800,
   "height": 450,
   "background": "#0f2040",
-  "projection": {"type": "equalEarth", "rotate": [-150, 0, 0]},
+  "params": [
+    {
+      "name": "zoom",
+      "value": 153,
+      "bind": {
+        "input": "range",
+        "min": 100,
+        "max": 600,
+        "step": 10,
+        "name": "Zoom Level: "
+      }
+    },
+    {
+      "name": "center_lon",
+      "value": 134,
+      "bind": {
+        "input": "range",
+        "min": -180,
+        "max": 180,
+        "step": 5,
+        "name": "Pan Horizontally (Longitude): "
+      }
+    },
+    {
+      "name": "center_lat",
+      "value": -25,
+      "bind": {
+        "input": "range",
+        "min": -90,
+        "max": 90,
+        "step": 5,
+        "name": "Pan Vertically (Latitude): "
+      }
+    }
+  ],
+  "projection": {
+    "type": "equalEarth",
+    "rotate": {"expr": "[-center_lon, -center_lat, 0]"},
+    "scale": {"expr": "zoom"}
+  },
   "layer": [
     {
       "data": {
