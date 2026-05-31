@@ -175,3 +175,31 @@ h1 {
 .vega-bind label {
   color: #ccddff !important;
 }
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #0a1628;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #1a3a5c;
+}
+
+.navbar a {
+  color: #a0c4ff;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar a:hover {
+  background: #1a3a5c;
+  color: #ffffff;
+}

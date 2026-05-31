@@ -30,3 +30,4 @@ vegaEmbed("#world_map", "js/world_map.vg.json").then(function(result) {
 
 vegaEmbed("#aus_states_map", "js/aus_states_map.vg.json").then(function(result) {
 }).catch(console.error);
+
