@@ -58,6 +58,32 @@
           {"field": "WINNER_PRIZE", "title": "Prize Money", "format": "$,.0f"}
         ]
       }
+    },
+    {
+      "data": {"values": [{"YEAR": "2025", "WINNER_PRIZE": 4450000}]},
+      "mark": {"type": "point", "shape": "arrow", "color": "#4ade80", "size": 200, "angle": 180},
+      "encoding": {
+        "x": {"field": "YEAR", "type": "ordinal"},
+        "y": {"field": "WINNER_PRIZE", "type": "quantitative"}
+      }
+    },
+    {
+      "data": {"values": [{"YEAR": "2025", "WINNER_PRIZE": 4450000}]},
+      "mark": {"type": "text", "color": "#4ade80", "align": "right", "dx": -8, "dy": -15, "fontSize": 11, "fontWeight": "bold"},
+      "encoding": {
+        "x": {"field": "YEAR", "type": "ordinal"},
+        "y": {"field": "WINNER_PRIZE", "type": "quantitative"},
+        "text": {"value": "Record: $4.5M"}
+      }
+    },
+    {
+      "data": {"values": [{"YEAR": "2021", "WINNER_PRIZE": 2000000}]},
+      "mark": {"type": "text", "color": "#ff6b6b", "align": "left", "dx": 5, "dy": 15, "fontSize": 10},
+      "encoding": {
+        "x": {"field": "YEAR", "type": "ordinal"},
+        "y": {"field": "WINNER_PRIZE", "type": "quantitative"},
+        "text": {"value": "↓ COVID impact"}
+      }
     }
   ]
 }
