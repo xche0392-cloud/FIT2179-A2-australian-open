@@ -163,3 +163,15 @@ h1 {
   color: #8899bb;
   font-size: 0.9em;
 }
+
+.vega-bind select {
+  background: #1a3a5c !important;
+  color: #ccddff !important;
+  border: 1px solid #ccddff !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+}
+
+.vega-bind label {
+  color: #ccddff !important;
+}

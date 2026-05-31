@@ -5,7 +5,29 @@
   "height": 350,
   "background": "#0f2040",
   "data": {"url": "data/attendance.csv"},
-  "transform": [{"filter": "datum.year >= 2000"}],
+  "params": [
+    {
+      "name": "year_from",
+      "value": 2000,
+      "bind": {
+        "input": "select",
+        "options": [2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+        "name": "From: "
+      }
+    },
+    {
+      "name": "year_to",
+      "value": 2026,
+      "bind": {
+        "input": "select",
+        "options": [2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],
+        "name": "To: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.year >= year_from && datum.year <= year_to"}
+  ],
   "layer": [
     {
       "mark": {"type": "rule", "color": "#ff6b6b", "strokeDash": [4, 4], "opacity": 0.8},

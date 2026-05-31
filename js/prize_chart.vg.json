@@ -5,9 +5,33 @@
   "height": 350,
   "background": "#0f2040",
   "data": {"url": "data/mens_grand_slam.csv"},
+  "params": [
+    {
+      "name": "year_from",
+      "value": 2000,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2025,
+        "step": 1,
+        "name": "From: "
+      }
+    },
+    {
+      "name": "year_to",
+      "value": 2025,
+      "bind": {
+        "input": "range",
+        "min": 2001,
+        "max": 2025,
+        "step": 1,
+        "name": "To: "
+      }
+    }
+  ],
   "transform": [
     {"filter": "datum.TOURNAMENT === 'Australian Open'"},
-    {"filter": "datum.YEAR >= 2000"}
+    {"filter": "datum.YEAR >= year_from && datum.YEAR <= year_to"}
   ],
   "layer": [
     {
